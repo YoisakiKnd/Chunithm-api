@@ -16,7 +16,7 @@ async def root():
 
 @app.get("/update")
 async def update(key: str = Query(..., description="Secret key for update")):
-    if key != "YoisakiKanade0210":
+    if key != "*********":
         raise HTTPException(status_code=401, detail="Unauthorized")
 
     try:
